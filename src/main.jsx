@@ -2,8 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import Home from './pages/Home'
-import './index.css'
-
 
 import {
   createBrowserRouter,
@@ -12,12 +10,24 @@ import {
 
 import Register from './pages/Register';
 import Login from './pages/Login';
+import ProductView from './components/ProductView';
+import AboutUs from './pages/AboutUs';
+import ContactUs from './pages/ContactUs';
+import ContextState from './context/ContextState';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/contact",
+    element: <ContactUs />,
+  },
+  {
+    path: "/about",
+    element: <AboutUs/>,
   },
   {
     path: "/register",
@@ -27,10 +37,17 @@ const router = createBrowserRouter([
     path: "/login",
     element: <Login/>,
   },
+  {
+    path: "/menu/:title",
+    element: <ProductView/>,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ContextState>
+      <RouterProvider router={router} />
+    </ContextState>
   </React.StrictMode>,
 )

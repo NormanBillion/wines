@@ -1,41 +1,60 @@
-import React from 'react'
-import Header from '../components/Header'
-import Button from 'react-bootstrap/Button';  
-import Form from 'react-bootstrap/Form';
-import '../pages/Register.css'
+import React, { useContext, useState } from 'react'
+import mycontext from '../context/mycontext'; // add MyContext
+import Header from '../components/Header';
+import Footer from './Footer';
+import '../Css/Register.css';
+import { Link } from 'react-router-dom';
 
 
-const Register = () => {
+function Register() {
+
+  const { AddUser } = useContext(mycontext);
+
+  const handleChange = (e) => {
+    setData({ ...AddUser, [e.target.name]: e.target.value });
+  };
+
+  function AddUsers() {
+
+    console.log(AddUser)
+
+  }
+
   return (
     <div>
       <Header />
-      <Form className='test'>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
-        </Form.Group>
+      <div className="RegisterBody">
+        <form className="form-register">
+        <h1>Register</h1>
+          <div className="form-group">
+            <input type="email"
+              className="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+              name='email'
+              defaultValue={AddUser.email}
+              onChange={handleChange}
+            />
+          </div>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
+          <div className="form-group">
+            <input type="password"
+              className="form-control"
+              id="exampleInputPassword1"
+              placeholder="Password"
+              name='password'
+              defaultValue={AddUser.password}
+              onChange={handleChange}
+            />
+          </div>
+          <Link to= "/login"> Have account already? Login Here</Link>
+          <br/>
+          <button onClick={AddUser}>Register</button>
+        </form>
 
-        </Form.Group>
-        <Button variant="warning">Submit</Button>
-        <div>
-          Register
-        </div>
-
-
-      </Form>
-
-      
-
+      </div>
+      <Footer />
     </div>
   )
 }

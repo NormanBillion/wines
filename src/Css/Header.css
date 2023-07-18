@@ -1,0 +1,35 @@
+.me-auto {
+    position: absolute;
+    right: -10;
+    margin-left: -10rem;
+}
+
+img {
+    width: 30px;
+}
+
+.left {
+    margin-left: -35px;
+}
+
+#basic, #basic-nav-dropdown {
+    margin-right: 45px;
+    font-weight: bold;
+    color: white;
+    padding-right: 25px;
+    margin-top: -5px;
+    font-family: Roboto;
+}
+
+/* .icon-1 {
+    position: absolute;
+    margin-left: 160rem;
+    color: whitesmoke;
+    margin-top: 15px;
+    cursor: pointer;
+} */
+.logo{
+    position: relative;
+    right: 40%;
+    top: -50%;
+}
