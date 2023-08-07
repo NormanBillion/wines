@@ -3,6 +3,8 @@ import Header from '../components/Header';
 import Footer from './Footer';
 import '../Css/AboutUs.css';
 import image from "../assets/wine-glass.jpg";
+import nom from '../assets/wine-glasses.jpg';
+import norman from '../assets/Norman.jpg'
 
 const AboutUs = () => {
   return (
@@ -18,7 +20,7 @@ const AboutUs = () => {
       <div class="row">
         <div class="column">
           <div class="card">
-            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Jane" style= {{ width : "100%"}}/>
+            <img src={nom} alt="Wine Glass" style= {{ width : "100%"}}/>
               <div class="container">
                 <h2>Jane Doe</h2>
                 <p class="title">CEO & Founder</p>
@@ -31,12 +33,12 @@ const AboutUs = () => {
 
         <div class="column">
           <div class="card">
-            <img src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Mike" style= {{ width : "100%"}}/>
+            <img src= {norman} alt="norman" style= {{ width : "100%"}}/>
               <div class="container">
-                <h2>Mike Ross</h2>
-                <p class="title">Art Director</p>
-                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                <p>mike@example.com</p>
+                <h2>Norman Billion</h2>
+                <p class="title">Captain</p>
+                <p></p>
+                <p>NormanDa@gmail.com</p>
                 <p><button class="button">Contact</button></p>
               </div>
           </div>
@@ -60,7 +62,6 @@ const AboutUs = () => {
       </div>
       <Footer />
     </div>
-
   )
 
 }

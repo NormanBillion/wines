@@ -1,35 +1,146 @@
-.me-auto {
-    position: absolute;
-    right: -10;
-    margin-left: -10rem;
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
-
-img {
-    width: 30px;
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
-.left {
-    margin-left: -35px;
+nav{
+    background: black;
+    padding: 5px 20px;
 }
-
-#basic, #basic-nav-dropdown {
-    margin-right: 45px;
-    font-weight: bold;
+ul{
+    list-style-type: none;
+}
+a{
     color: white;
-    padding-right: 25px;
-    margin-top: -5px;
-    font-family: Roboto;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration:underline;
+}
+.Menu li{
+    font-size: 16px;
+    padding: 15px 5px;
+}
+.Menu li a{
+    display: block;
+}
+.logo a{
+    font-size: 20px;
+}
+.button.secondary{
+    border-bottom: 1px white solid;
+}
+.Menu{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* .icon-1 {
-    position: absolute;
-    margin-left: 160rem;
-    color: whitesmoke;
-    margin-top: 15px;
+.toggle{
+    order: 1;
+}
+.item.button{
+    order: 2;
+}
+.item{
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+.item.active{
+    display: block;
+}
+.toggle{
     cursor: pointer;
-} */
-.logo{
+}
+.bars{
+    background: #999;
+    display: inline-block;
+    height: 2px;
     position: relative;
-    right: 40%;
-    top: -50%;
+    width: 20px;
+}
+.bars::before,.bars::after{
+    background: #999;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: absolute;
+    width: 20px;
+}
+.bars::before{
+    top: 5px;
+}
+.bars::after{
+    top: -5px;
+}
+@media all and (min-width: 468px){
+    .Menu{
+        justify-content: center;
+    }
+    .logo{
+        flex: 1;
+    }
+    .item.button{
+        width: auto;
+        order: 1;
+        display: block;
+    }
+
+    .toggle{
+        order: 2;
+    }
+    .button.secondary{
+        border: 0;
+    }
+    .button a{
+        text-decoration: none;
+        padding: 7px 15px;
+        background: rgb(9, 246, 246);
+        border: 1px solid rgb(0, 213, 255);
+        border-radius: 50rem;
+    }
+    .button.secondary a {
+        background: transparent;
+    }
+    .button a:hover{
+        transition: all .25s;
+    }
+    .button:not(.secondary) a:hover{
+        background: rgb(9, 246, 246);
+        border-color: rgb(9, 246, 246);
+        
+    }
+    .button.secondary a:hover{
+        color: #ddd;
+    }
+    @media all and (min-width: 768px) {
+        .item{
+            display: block;
+            width: auto;
+        }
+        .toggle{
+            display: none;
+        }
+        .logo{
+            order: 0;
+        }
+        .item{
+            order: 1;
+        }
+        .button{
+            order: 2;
+        }
+        .Menu li{
+            padding: 15px 10px;
+        }
+        Menu li.button{
+            padding-right: 0;
+        }
+    }
 }

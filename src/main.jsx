@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-
 import Home from './pages/Home'
 
 import {
@@ -41,6 +40,11 @@ const router = createBrowserRouter([
     path: "/menu/:title",
     element: <ProductView/>,
   },
+  {
+    path: "/menu",
+    element: <ProductView/>,
+  },
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
