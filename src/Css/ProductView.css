@@ -11,13 +11,13 @@ a {
 }
 .card
 {
-  border: none;
+ 
 }
 .card-body
 {
   margin-left: 45%;
 }
 .card-title{
-  position: relative;
-  margin-left: -5rem;
+  position:relative;
+  margin-left: -3rem;
 }

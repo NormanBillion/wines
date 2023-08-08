@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import "../Css/Products.css";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/esm/Button";
+import Header from "./Header";
+import Footer from "../pages/Footer";
 
 function Products(props) {
   
   return (
     <>
+    <Header/>
       <div className="cards-container">
         {props.item.map((menu) => {
           return (
@@ -25,6 +28,7 @@ function Products(props) {
           );
         })}
       </div>
+      <Footer/>
     </>
   );
 }

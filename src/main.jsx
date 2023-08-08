@@ -10,6 +10,7 @@ import {
 import Register from './pages/Register';
 import Login from './pages/Login';
 import ProductView from './components/ProductView';
+import Menu from './components/Menu';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import ContextState from './context/ContextState';
@@ -42,7 +43,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/menu",
-    element: <ProductView/>,
+    element: <Menu/>,
   },
   
 ]);

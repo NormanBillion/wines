@@ -3,8 +3,9 @@
     grid-template-columns: 250px 250px 250px 250px;
     gap: 10px;
     padding: -1.5px;
-    margin-left: -45rem;
     margin-top: 50px;
+    margin-left: 50rem;
+    margin-bottom: 5rem;
 }
 
 .card {
@@ -33,7 +34,6 @@ Button.variant {
     font-weight: 76px;
     line-height: 1.5;
     color: #212529;
-
     background-clip: padding-box;
     border: 1px solid gray;
     -webkit-appearance: none;

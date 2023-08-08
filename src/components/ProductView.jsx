@@ -12,16 +12,8 @@ function ProductView() {
       {data
         .filter((menu) => menu.name === title)
         .map((menu, index) => (
-          <div
-            key={index}
-            className="card"
-          >
-            <img 
-            className="card-img-top" 
-            src={menu.image} 
-            alt="Card image cap" 
-            style={{width: '600px'}}
-            />
+          <div key={index} className="card">
+            <img className="card-img-top" src={menu.image}alt="Card image cap" style={{ width: '600px' }}/>
             <div className="card-body">
               <h5 className="card-title">{menu.name}</h5>
               <p className="card-text">{menu.price}</p>
@@ -29,7 +21,7 @@ function ProductView() {
             </div>
           </div>
         ))}
-        <Footer/>
+      <Footer />
     </div>
   );
 }
