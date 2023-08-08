@@ -15,15 +15,15 @@ import WineBottle from '../assets/Wine-Bottle.avif'
 
 const AboutUs = () => {
   return (
-    <div>
+    <div className='background-image'>
       <Header />
       <div class="about-section">
-        <h1>About Us Page</h1>
-        <p>Some text about who we are and what we do.</p>
+        <h1>Our Team</h1>
+        <p>The team is debating how to construct a project around wine and farming.</p>
         <p>Resize the browser window to see that this page is responsive by the way.</p>
       </div>
 
-      <h3>Our Team</h3>
+      
       <div class="row">
         <div class="column">
           <div class="card">

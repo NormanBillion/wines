@@ -7,7 +7,7 @@ import Footer from "../pages/Footer";
 function ProductView() {
   const { title } = useParams();
   return (
-    <div>
+    <div className="background-Product">
       <Header />
       {data
         .filter((menu) => menu.name === title)

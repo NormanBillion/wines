@@ -33,11 +33,13 @@ a:hover{
 .button.secondary{
     border-bottom: 1px white solid;
 }
+
 .Menu{
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    height: 7vh;
 }
 
 .toggle{
